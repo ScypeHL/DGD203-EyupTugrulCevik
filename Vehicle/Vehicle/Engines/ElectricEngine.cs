@@ -1,24 +1,23 @@
 ﻿using System;
-
+using System.Security.Cryptography.X509Certificates;
 
 namespace Pro
 {
-    internal class ElectricEngine: Engine
+    internal class ElectricEngine : Engine
     {
         public ElectricEngine() 
         {
-            ef = 0.5f;
-        }
-        
-        public override void start()
-        {
-            base.start();
-            fuelStatus();
+            Hp = 350;
+            Ef = 0.5f;
+            EngineName = "Electric";
+
         }
 
-        public override void fuelStatus() 
+        public override void fuelCheck()
         {
-            Console.WriteLine("The Battery is fine");
+            Console.WriteLine(Fuel + "kw/" + FuelTank + "kw");
+            Console.WriteLine("Tank is " + Fuel / FuelTank * 100 + "% full");
         }
+
     }
 }

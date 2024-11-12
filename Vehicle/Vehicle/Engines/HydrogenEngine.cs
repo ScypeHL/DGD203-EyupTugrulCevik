@@ -3,14 +3,15 @@
 
 namespace Pro
 {
-    internal class HydrogenEngine: Engine
+    internal class HydrogenEngine : Engine
     {
-        public HydrogenEngine() 
+        public HydrogenEngine()
         {
-            ef = 1;
-            fuelStatus();
-        }
-
-
+            Hp = 90;
+            Ef = 1;
+            EngineName = "Hydrogen";
     }
+    }
+
 }
+

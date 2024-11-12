@@ -5,35 +5,42 @@ namespace Pro
     internal class Engine: Vehicle
     {
         public bool isRunning;
-        public float ef = 2;
-        float fuelRem = Fuel;
+
 
         public Engine() 
         {
+            if (isRunning)
+            {
+                Console.WriteLine("Car started to work");
+                Console.WriteLine($"The car creates {Hp} horsepower");
+            }
         }
         public virtual void start() { 
             isRunning = true;
-            Console.WriteLine("Car started to work");
-            Console.WriteLine($"The car creates {Hp} horsepower");
+            hpCheck();
+            fuelCheck();
+            range();
         }
 
         public void stop()
         {
-            isRunning = false;
+            isRunning = true;
             Console.WriteLine("The engine has stopped");
         }
 
-        public virtual void fuelStatus() 
+        public void hpCheck() 
         {
-            Console.WriteLine("The fuel level is fine");
+            Console.WriteLine("That engine generates " + Hp + " horsepower");
         }
-        public void runEngine(float fuelRem)
+        public virtual void range()
         {
-            if (fuelRem > 0 || isRunning == true)
-            {
-                Console.WriteLine(Fuel);
-            }
+            Console.WriteLine("With that fuel this car can go for " + Fuel / Ef + "km");
+        }
 
+        public virtual void fuelCheck() 
+        {
+            Console.WriteLine(Fuel + "L/" + FuelTank + "L");
+            Console.WriteLine("Tank is " + Fuel / FuelTank * 100 + "% full");
         }
     }
 }

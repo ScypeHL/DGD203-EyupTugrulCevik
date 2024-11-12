@@ -2,22 +2,27 @@
 
 namespace Pro
 {
-    internal class CarSample: Vehicle
+    internal class CarSample : Vehicle
     {
         private Engine engine;
+        Random rng = new Random();
 
-        public CarSample(float fuel,int hp, Engine engineType) 
+        string[] colorList = {"Black", "White", "Red", "Green", "Blue"};
+        public CarSample(float fuel, float fuelTank, Engine engineType) 
         {
-            fuel = Math.Clamp(fuel, 0f, 100f);
+            Color = colorList[rng.Next(0, 4)];
+            fuel = Math.Clamp(fuel, 0f, fuelTank);
+
             engine = engineType;
             Fuel = fuel;
-            Hp = hp;
-            
+            FuelTank = fuelTank;
         }
+        
         public void runCar() 
         {
             engine.start();
-            Console.WriteLine(Fuel);
+            Console.WriteLine("This is the information of " + Color + " " + EngineName + " car");
+            Console.WriteLine("");
         }
 
     }

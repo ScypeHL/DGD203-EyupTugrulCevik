@@ -7,13 +7,13 @@ namespace Pro
 
         static void Main(string[] args)
         {
-            CarSample firstCar = new CarSample(100f, 350, new ElectricEngine());
+            CarSample firstCar = new CarSample(10f, 27,new ElectricEngine());
             firstCar.runCar();
 
-            CarSample secondCar = new CarSample(4f, 90, new DieselEngine());
+            CarSample secondCar = new CarSample(16f, 60,new DieselEngine());
             secondCar.runCar();
 
-            CarSample thirdCar = new CarSample(4f, 110, new HydrogenEngine());
+            CarSample thirdCar = new CarSample(4f, 30,new HydrogenEngine());
             thirdCar.runCar();
         }
 
