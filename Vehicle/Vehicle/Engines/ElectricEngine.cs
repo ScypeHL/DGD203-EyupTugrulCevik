@@ -7,16 +7,15 @@ namespace Pro
     {
         public ElectricEngine() 
         {
-            Hp = 350;
-            Ef = 0.5f;
+            hp = 350;
+            ef = 7f;
             EngineName = "Electric";
 
         }
 
         public override void fuelCheck()
         {
-            Console.WriteLine(Fuel + "kw/" + FuelTank + "kw");
-            Console.WriteLine("Tank is " + Fuel / FuelTank * 100 + "% full");
+            Console.WriteLine(Fuel + "kw/" + FuelTank + "kw - Battery is " + Fuel / FuelTank * 100 + "% full");
         }
 
     }

@@ -7,10 +7,10 @@ namespace Pro
     {
         public HydrogenEngine()
         {
-            Hp = 90;
-            Ef = 1;
+            hp = 90;
+            ef = 9f;
             EngineName = "Hydrogen";
-    }
+        }
     }
 
 }

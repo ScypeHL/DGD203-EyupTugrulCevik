@@ -7,8 +7,8 @@ namespace Pro
     {
         public DieselEngine()
         {
-            Hp = 120;
-            Ef = 2;
+            hp = 120;
+            ef = 6;
             EngineName = "Diesel";
         }
     }
